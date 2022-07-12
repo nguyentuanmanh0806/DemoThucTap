@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../asset/font/fontawesome-5.15.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="../asset/font/fontawesome-5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+
+</head>
+<body>
+    <div>Dev fullstack</div>
+    <div class="text-bold">Dev fullstack bold</div>
+    <div class="text-italic">Dev fullstack italic</div>
+
+    <label>1. button</label>
+    <div class="m-row">
+    <button style="margin-top: 4px" class="ms-btn">Nộp Hồ Sơ</button>
+    </div>
+
+    <label>2. button</label>
+    <div class="m-row">
+    <button style="margin-top: 4px;" class="ms-btn ms-btn-icon">Lập Hồ Sơ</button>
+    </div>
+
+    <label>3. input</label>
+    <div style="margin-top: 80px;" class="m-row">
+        <div class="input-container">
+            <input type="text" id="input-demo" class="ms-input input-error" placeholder="Tìm kiếm theo tên, số hồ sơ">
+            <div id="icon-refresh" class="icon-refresh"></div>
+            <div class="invalid-format">Mật khẩu không đúng định dạng</div>
+                <div class="arrow-down"></div>
+        </div>
+    </div>
+
+    <div class="m-row">
+        <button id="show-toast-message" class="ms-btn">Show toast message</button>
+    </div>
+
+    <div class="m-row">
+        <div id="group-toast-message" class="toast-message-container">
+            <div class="toast-message-item">
+                <div class="icon icon-display icon-error"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="toast-message-content">Noi dung di kem tieu de</div>
+                <div class="icon close-icon"></div>
+            </div>
+            <div class="toast-message-item">
+                <div class="icon icon-display icon-warning"><i class="fa-solid fa-circle-exclamation"></i></div>
+                <div class="toast-message-content">Noi dung di kem tieu de</div>
+                <div class="icon close-icon"></div>
+            </div>
+            <div class="toast-message-item">
+                <div class="icon icon-display icon-success"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="toast-message-content">Noi dung di kem tieu de</div>
+                <div class="icon close-icon"></div>
+            </div>
+            <div class="toast-message-item">
+                <div class="icon icon-display icon-info"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="toast-message-content">Noi dung di kem tieu de</div>
+                <div class="icon close-icon"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('icon-refresh').addEventListener('click',function(){
+            document.getElementById('input-demo').value = ''
+        })
+        document.getElementById('show-toast-message').addEventListener('click',function(){
+            document.getElementById('group-toast-message').classList.add('visible')
+            setTimeout(()=>{
+                document.getElementById('group-toast-message').classList.remove('visible')
+            },1000)
+        })
+    </script>
+</body>
+</html>
